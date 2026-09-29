@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: #f9fafb;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+body > .container > h1 {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.builder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-section,
+.preview-section {
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-section > h2,
+.preview-section > h2 {
+    color: #93c5fd;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #d1d5db;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 15px;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    background: #111827;
+    color: #f9fafb;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #60a5fa;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.dynamic-item {
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.dynamic-item h4 {
+    color: #dbeafe;
+    margin-bottom: 12px;
+}
+
+.remove-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #b91c1c;
+}
+
+.add-btn {
+    background: #059669;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background: #047857;
+}
+
+.print-btn {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.print-btn:hover {
+    background: #1d4ed8;
+}
+
+.resume {
+    background: white;
+    color: #111827;
+    min-height: 800px;
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.resume-header h1 {
+    color: #1e3a8a;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.resume-header p {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.resume-content section {
+    margin-bottom: 25px;
+}
+
+.resume-content h2 {
+    color: #1e40af;
+    font-size: 20px;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.resume-content p {
+    line-height: 1.6;
+    color: #374151;
+}
+
+.preview-item {
+    margin-bottom: 15px;
+}
+
+.preview-item h3 {
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.preview-item p {
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+    .builder {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    body > .container > h1 {
+        font-size: 28px;
+    }
+
+    .form-section,
+    .preview-section {
+        padding: 18px;
+    }
+
+    .resume {
+        padding: 20px;
+    }
+
+    .resume-header h1 {
+        font-size: 25px;
+    }
+
+}
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    body > .container > h1,
+    .form-section,
+    .preview-section > h2 {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+    }
+
+    .builder {
+        display: block;
+    }
+
+    .preview-section {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .resume {
+        min-height: auto;
+        padding: 30px;
+        border-radius: 0;
+    }
+
+}
